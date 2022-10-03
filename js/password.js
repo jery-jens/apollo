@@ -7,15 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Variables
     const password = "test";
 
-    console.log(passwordField)
-
-    passwordField.addEventListener("input", (e) => {
-        console.log(e);
-    });
-
     Webflow.push(function() {
         $('form').submit(function() {
-            console.log(passwordField.value);
+            console.log(passwordField.value, password);
 
             if (passwordField.value !== password) {
                 errorMessage.style.display = "block";
