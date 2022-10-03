@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const baseRoute = window.location.origin;
 
     (() => {
+        console.log(path);
         if (path === "/") {
             return;
         } else if (path === "/locked") {
