@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (passwordField.value !== password) {
             errorMessage.style.display = "block";
         } else {
-
+            sessionStorage.setItem("access_granted", true);
+            window.location.href = window.location.origin + "/home";
         };
     });
 });
