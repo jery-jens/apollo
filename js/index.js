@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const access = Boolean(sessionStorage.getItem("access_granted")) ?? false;
 
     // Routes
-    const lockedRoute = window.location.origin + "/locked";
-    const baseRoute = window.location.origin;
+    const lockedRoute = window.location.origin + "/";
+    const baseRoute = window.location.origin + "/home";
 
     (() => {
         console.log(path);
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         } else if (path === "/") {
             console.log(access);
-            // access ? window.location.href === baseRoute : window.location.href === lockedRoute;
+            access ? window.location.href === baseRoute : null;
         } else {
             access ? window.location.href === lockedRoute : null;
         };

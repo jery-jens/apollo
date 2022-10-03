@@ -1,2 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const passwordField = document.querySelector("#password");
+
+    passwordField.addEventListener("onchange", (e) => {
+        
+    });
 });
