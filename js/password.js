@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = "test";
 
     submitButton.addEventListener("click", () => {
-        console.log(passwordField.value, password);
-
         if (passwordField.value !== password) {
             errorMessage.style.display = "block";
         } else {
