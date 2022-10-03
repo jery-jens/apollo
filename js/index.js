@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     (() => {
         console.log(path);
-        if (path === "/") {
+        if (path === "/home") {
             return;
-        } else if (path === "/locked") {
-            access ? window.location.href === baseRoute : window.location.href === lockedRoute;
+        } else if (path === "/") {
+            console.log(access);
+            // access ? window.location.href === baseRoute : window.location.href === lockedRoute;
         } else {
             access ? window.location.href === lockedRoute : null;
         };
