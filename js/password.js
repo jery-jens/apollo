@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Elements
     const passwordField = document.querySelector("#password");
-    const submitButton = document.querySelector(".inner-submit");
+    const submitButton = document.querySelector(".submit");
     const errorMessage = document.querySelector(".wrong-password");
 
     // Variables
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (passwordField.value !== password) {
             errorMessage.style.display = "block";
         } else {
-            
+
         };
     });
 });
