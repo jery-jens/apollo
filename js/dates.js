@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const className = `date-item-${order[i]}`;
 
                 if (i === 0) {
+                    console.log(i)
                     console.log("remove", prevClassName, nextClassName);
                     console.log("add", className);
                 };
