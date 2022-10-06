@@ -60,15 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < dates.length; i++) {
                 const prevClassName = `date-item-${order[6] ?? 6}`;
                 const nextClassName = `date-item-${order[i+1] ?? 0}`;
-                const className = `date-item-${order[i]}`;
+                const className = `date-item-0`;
 
-                if (i === 0) {
-                    console.log(i)
-                    console.log("remove", prevClassName, nextClassName);
-                    console.log("add", className);
-                };
+                // if (i === 0) {
+                //     console.log(i)
+                //     console.log("remove", prevClassName, nextClassName);
+                //     console.log("add", className);
+                // };
 
-                dates[i].classList.remove(prevClassName ?? null, nextClassName ?? null);
+                // dates[i].classList.remove(prevClassName ?? null, nextClassName ?? null);
                 dates[i].classList.add(className);
             };
         };
