@@ -2,16 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Elements
     const checker = document.querySelector(".js-date-checker");
     const wrapper = checker.parentElement;
+    const dates = document.querySelectorAll(".date-item");
 
     // Positions
     const wTop = window.scrollY + wrapper.getBoundingClientRect().top;
     const wBottom = window.scrollY + wrapper.getBoundingClientRect().bottom;
-    const wHeight = wTop - wBottom;
+    const wHeight = wBottom - wTop;
 
-    const cTop = window.scrollY + wrapper.getBoundingClientRect().top;
+    const cTop = window.scrollY + checker.getBoundingClientRect().top;
 
     document.addEventListener("scroll", () => {
-        console.log(cTop);
+        console.log(cTop)
+        
+        if (cTop ) {
+            dates.forEach((date) => {
+
+            });
+        };
     });
 
     console.log(wHeight, wBottom, wTop);
