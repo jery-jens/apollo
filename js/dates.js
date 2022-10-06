@@ -28,48 +28,38 @@ document.addEventListener("DOMContentLoaded", () => {
             
             if (margin >= 180 && margin < 270) {
                 console.log("show 2");
-                order = [1, 2, 3, 4, 5, 6, 0];
+                order = [6, 0, 1, 2, 3, 4, 5];
 
             };
 
             if (margin >= 270 && margin < 360) {
                 console.log("show 3");
-                order = [2, 3, 4, 5, 6, 0, 1];
+                order = [5, 6, 0, 1, 2, 3, 4];
             };
 
             if (margin >= 360 && margin < 450) {
                 console.log("show 4");
-                order = [3, 4, 5, 6, 0, 1, 2];
+                order = [4, 5, 6, 0, 1, 2, 3];
             };
 
             if (margin >= 450 && margin < 540) {
                 console.log("show 5");
-                order = [4, 5, 6, 0, 1, 2, 3];
+                order = [3, 4, 5, 6, 0, 1, 2];
             };
 
             if (margin >= 540 && margin < 630) {
                 console.log("show 6");
-                order = [5, 6, 0, 1, 2, 3, 4];
+                order = [2, 3, 4, 5, 6, 0, 1];
             };
 
             if (margin >= 630 && margin < 720) {
                 console.log("show 7");
-                order = [6, 0, 1, 2, 3, 4, 5];
+                order = [1, 2, 3, 4, 5, 6, 0];
             };
 
             for (let i = 0; i < dates.length; i++) {
-                const prevClassName = `date-item-${order[6] ?? 6}`;
-                const nextClassName = `date-item-${order[i+1] ?? 0}`;
-                const className = `date-item-0`;
-
-                // if (i === 0) {
-                //     console.log(i)
-                //     console.log("remove", prevClassName, nextClassName);
-                //     console.log("add", className);
-                // };
-
-                // dates[i].classList.remove(prevClassName ?? null, nextClassName ?? null);
-                dates[order[0]].classList.add(className);
+                const className = `${order[i]}`
+                dates[i].classList.add(className);
             };
         };
 
