@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log("remove", prevClassName, nextClassName);
                 console.log("add", className);
 
-                dates[i].classList.remove(prevClassName, nextClassName);
+                dates[i].classList.remove(prevClassName ?? null, nextClassName ?? null);
                 dates[i].classList.add(className);
             };
         };
