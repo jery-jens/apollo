@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const offset = window.innerHeight + window.scrollY;
         const margin = offset - wTop;
         const downScroll = prevScroll < window.scrollY ? true : false;
-        console.log(margin);
+        console.log(margin,wrapper.getBoundingClientRect().top)
 
         if (margin >= 0) {
             if (margin >= 0 && margin < 90) {
