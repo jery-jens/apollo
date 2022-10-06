@@ -59,12 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             for (let i = 0; i < dates.length; i++) {
-                const className = `date-item-${order[i]}`
-
                 for (let j = 0; j < order.length; j++) {
                     dates[i].classList.remove(`date-item-${order[j]}`);
                 };
+            };
 
+            for (let i = 0; i < dates.length; i++) {
+                const className = `date-item-${order[i]}`
                 dates[i].classList.add(className);
             };
         };
