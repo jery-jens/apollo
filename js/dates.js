@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     dates[i].classList.remove(`date-item-${order[j]}`);
                 };
 
-                // dates[i].classList.add(className);
+                dates[i].classList.add(className);
             };
         };
 
