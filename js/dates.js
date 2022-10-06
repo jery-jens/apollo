@@ -58,12 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             for (let i = 0; i < dates.length; i++) {
-                console.log(order, i-1, i+1)
-                const prevClassName = `date-item-${order[i-1]}`;
-                const nextClassName = `date-item-${order[i+1]}`;
+                const prevClassName = `date-item-${order[0-1] ?? 0}`;
+                const nextClassName = `date-item-${order[2] ?? 0}`;
                 const className = `date-item-${order[i]}`;
 
-                console.log("remove", prevClassName, nextClassName);
+                console.log("remove", prevClassName, nextClassName, order);
                 console.log("add", className);
 
                 dates[i].classList.remove(prevClassName ?? null, nextClassName ?? null);
