@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cTop = window.scrollY + checker.getBoundingClientRect().top;
 
     window.addEventListener("scroll", () => {
-        console.log(window.scrollY, wTop, wrapper.getBoundingClientRect())
+        console.log(window.scrollY, wBottom, wrapper.getBoundingClientRect())
         
         if (cTop ) {
             dates.forEach((date) => {
