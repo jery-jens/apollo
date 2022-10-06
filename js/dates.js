@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // };
 
                 // dates[i].classList.remove(prevClassName ?? null, nextClassName ?? null);
-                dates[i].classList.add(className);
+                dates[order[0]].classList.add(className);
             };
         };
 
