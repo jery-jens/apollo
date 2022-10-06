@@ -6,5 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Positions
     const wTop = window.scrollY + wrapper.getBoundingClientRect().top;
-    console.log(wTop);
+    const wBottom = window.scrollY + wrapper.getBoundingClientRect().bottom;
+    const wHeight = wTop - wBottom;
+
+    console.log(wHeight, wBottom, wTop);
 });
