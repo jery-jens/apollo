@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const wrapper = checker.parentElement;
 
     // Positions
-    const wTop = wrapper.getBoundingClientRect().top;
+    const wTop = window.scrollY + wrapper.getBoundingClientRect().top;
     console.log(wTop);
 });
