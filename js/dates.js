@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const offset = window.innerHeight + window.scrollY;
         const margin = offset - wTop;
         const downScroll = prevScroll < window.scrollY ? true : false;
+
         let order = [0, 1, 2, 3, 4, 5, 6];
 
         if (margin >= 0) {
@@ -58,8 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             for (let i = 0; i < dates.length; i++) {
-                const className = `${order[i]}`
-                dates[i].classList.add(className);
+                const className = `date-item-${order[i]}`
+
+                for (let j = 0; j < order.length; j++) {
+                    dates[i].classList.remove(`date-item-${order[j]}`);
+                };
+
+                // dates[i].classList.add(className);
             };
         };
 
