@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             for (let i = 0; i < dates.length; i++) {
-                const prevClassName = `date-item-${order[i-1] ?? 6}`;
+                const prevClassName = `date-item-${order[6] ?? 6}`;
                 const nextClassName = `date-item-${order[i+1] ?? 0}`;
                 const className = `date-item-${order[i]}`;
 
