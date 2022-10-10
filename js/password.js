@@ -26,13 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     submitButton.addEventListener("click", () => {
-        if (passwordField.value !== password) {
-            errorMessage.style.display = "block";
-        } else if (passwordField.value !== scPassword) {
-            errorMessage.style.display = "block";
-        } else {
+        if (passwordField.value === password) {
             sessionStorage.setItem("access_granted", true);
             window.location.href = window.location.origin + "/home";
+        } else if (passwordField.value === scPassword) {
+            sessionStorage.setItem("access_granted", true);
+            window.location.href = window.location.origin + "/home";
+        } else {
+            errorMessage.style.display = "block";
         };
     });
 });
