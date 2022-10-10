@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Variables
     const password = "Tellit";
 
+    Webflow.push(function() {
+        $('form').submit(function() {
+            if (passwordField.value !== password) {
+                errorMessage.style.display = "block";
+            } else {
+                sessionStorage.setItem("access_granted", true);
+                window.location.href = window.location.origin + "/home";
+            };
+        });
+      });
+
     submitButton.addEventListener("click", () => {
         if (passwordField.value !== password) {
             errorMessage.style.display = "block";
