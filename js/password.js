@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Webflow.push(function() {
         $('form').submit(function() {
-            if (passwordField.value !== password || passwordField.value !== scPassword) {
+            if (passwordField.value !== password) {
+                errorMessage.style.display = "block";
+            } else if (passwordField.value !== scPassword) {
                 errorMessage.style.display = "block";
             } else {
                 sessionStorage.setItem("access_granted", true);
@@ -24,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     submitButton.addEventListener("click", () => {
-        if (passwordField.value !== password || passwordField.value !== scPassword) {
+        if (passwordField.value !== password) {
+            errorMessage.style.display = "block";
+        } else if (passwordField.value !== scPassword) {
             errorMessage.style.display = "block";
         } else {
             sessionStorage.setItem("access_granted", true);
