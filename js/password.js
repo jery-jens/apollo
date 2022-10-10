@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 sessionStorage.setItem("access_granted", true);
                 window.location.href = window.location.origin + "/home";
             };
+
+            document.querySelector("form").style.display = "flex";
         });
       });
 
