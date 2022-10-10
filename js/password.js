@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Variables
     const password = "Tellit";
+    const scPassword = "tellit";
 
     Webflow.push(function() {
         $('form').submit(function() {
-            if (passwordField.value !== password) {
+            if (passwordField.value !== password || passwordField.value !== scPassword) {
                 errorMessage.style.display = "block";
             } else {
                 sessionStorage.setItem("access_granted", true);
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     submitButton.addEventListener("click", () => {
-        if (passwordField.value !== password) {
+        if (passwordField.value !== password || passwordField.value !== scPassword) {
             errorMessage.style.display = "block";
         } else {
             sessionStorage.setItem("access_granted", true);
