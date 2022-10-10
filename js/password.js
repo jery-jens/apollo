@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorMessage = document.querySelector(".wrong-password");
 
     // Variables
-    const password = "test";
+    const password = "Tellit";
 
     submitButton.addEventListener("click", () => {
         if (passwordField.value !== password) {
