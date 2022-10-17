@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const choices = document.querySelectorAll(".choice");
-    const checkes = choice.querySelector(".select-choice-wrapper");
+    const checkes = document.querySelectorAll(".select-choice-wrapper");
 
     choices.forEach((choice, index) => {
         choice.addEventListener("click", () => {
