@@ -8,11 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!choice.classList.contains("active")) {
                 choices.forEach((innerChoice, innerIndex) => {
                     if (index === innerIndex) {
-                        choice.classList.add("active");
-                        check.classList.add("active");
+                        console.log("add", index)
+                        // choice.classList.add("active");
+                        // check.classList.add("active");
                     } else {
-                        choice.classList.remove("active");
-                        check.classList.remove("active");
+                        console.log("remove", index)
+                        // choice.classList.remove("active");
+                        // check.classList.remove("active");
                     };
                 });
             };
