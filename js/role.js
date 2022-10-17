@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!choice.classList.contains("active")) {
                 choices.forEach((innerChoice, innerIndex) => {
                     if (index === innerIndex) {
-                        console.log("add", index)
+                        console.log("add", innerIndex)
                         // choice.classList.add("active");
                         // check.classList.add("active");
                     } else {
-                        console.log("remove", index)
+                        console.log("remove", innerIndex)
                         // choice.classList.remove("active");
                         // check.classList.remove("active");
                     };
