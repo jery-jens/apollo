@@ -1,20 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const choices = document.querySelectorAll(".choice");
+    const checkes = choice.querySelector(".select-choice-wrapper");
 
     choices.forEach((choice, index) => {
-        const check = choice.querySelector(".select-choice-wrapper");
-
         choice.addEventListener("click", () => {
             if (!choice.classList.contains("active")) {
                 choices.forEach((innerChoice, innerIndex) => {
                     if (index === innerIndex) {
-                        console.log("add", innerIndex)
-                        // choice.classList.add("active");
-                        // check.classList.add("active");
+                        choices[innerIndex].classList.add("active");
+                        checkes[innerIndex].classList.add("active");
                     } else {
-                        console.log("remove", innerIndex)
-                        // choice.classList.remove("active");
-                        // check.classList.remove("active");
+                        choices[innerIndex].classList.remove("active");
+                        checkes[innerIndex].classList.remove("active");
                     };
                 });
             };
