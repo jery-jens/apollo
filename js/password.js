@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     let username = prompt("Please enter the username.");
-    while(username !== "test"){
+    while(username !== "TelenetApollo"){
         username = prompt("Please enter the username."); 
     };
 
     let password = prompt("Please enter the password.");
-    while(password !== "test"){
+    while(password !== "Apollo"){
         password = prompt("Please enter the password."); 
     };
 
