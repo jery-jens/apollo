@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const baseRoute = window.location.origin + "/home";
 
     (() => {
-        console.log(path);
         if (path === "/home") {
             return;
         } else if (path === "/") {

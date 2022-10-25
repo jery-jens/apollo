@@ -8,4 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     while(password !== "test"){
         password = prompt("Please enter the password."); 
     };
+
+    sessionStorage.setItem("access_granted", true);
+
+    window.location = window.location.origin + "/home";
 });
