@@ -54,11 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = item.querySelector(".item-identifier").innerHTML;
 
         if (id === "Participant" && role !== "participant") {
-            item.style.display = "hidden";
+            item.style.display = "none";
         } else if (id === "Track lead" && role !== "track-lead") {
-            item.style.display = "hidden";
+            item.style.display = "none";
         } else if (id === "Challenge owner" && role !== "challenge-owner") {
-            item.style.display = "hidden";
+            item.style.display = "none";
         };
     });
 });
