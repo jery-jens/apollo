@@ -43,8 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
             roleItems[1].style.display = "flex";
         } else if (role === "challenge-owner") {
             roleItems[2].style.display = "flex";
-        } else {
-            item.style.display = "none";
         };
     });
 });
