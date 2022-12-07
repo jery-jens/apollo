@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    /**
+     * Dashboard sections
+     */
     const dashItems = document.querySelectorAll(".dashboard-item");
     
     dashItems.forEach((item, i) => {
@@ -25,4 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         });
     });
+
+    /**
+     * Configure role
+     */
+
+    const role = localStorage.getItem("role");
+    console.log(role);
 });

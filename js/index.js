@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (path === "/home") {
             return;
         } else if (path === "/") {
-            console.log(access);
             access ? window.location.href === baseRoute : null;
         } else {
             access ? window.location.href === lockedRoute : null;
