@@ -34,5 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
      */
 
     const role = localStorage.getItem("role");
-    console.log(role);
+    const roleItems = document.querySelectorAll(".role");
+
+    roleItems.forEach((item, i) => {
+        if (role === "participant") {
+            roleItems[0].style.display = "flex";
+        } else if (role === "track-lead") {
+            roleItems[1].style.display = "flex";
+        } else if (role === "challenge-owner") {
+            roleItems[2].style.display = "flex";
+        } else {
+            item.style.display = "none";
+        };
+    });
 });
