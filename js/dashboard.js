@@ -51,7 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const dashElements = document.querySelectorAll(".dash-item");
 
     dashElements.forEach((item) => {
-        const id = item.querySelector(".item-identifier");
-        console.log(id.innerHTML);
+        const id = item.querySelector(".item-identifier").innerHTML;
+
+        if (id === "Participant" && role !== "participant") {
+            item.style.display = "hidden";
+        } else if (id === "Track lead" && role !== "track-lead") {
+            item.style.display = "hidden";
+        } else if (id === "Challenge owner" && role !== "challenge-owner") {
+            item.style.display = "hidden";
+        };
     });
 });
