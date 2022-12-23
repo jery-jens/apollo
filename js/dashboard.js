@@ -12,53 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btn.addEventListener("click", () => {
             if (btn.classList.contains("active")) {
-                item.classList.remove("active");
                 btn.classList.remove("active");
                 content.classList.remove("active");
-
-                plus.style.display = "block";
-                minus.style.display = "none";
+                plus.style.display = "none";
+                minus.style.display = "flex";
             } else {
-                item.classList.add("active");
                 btn.classList.add("active");
                 content.classList.add("active");
-
-                plus.style.display = "none";
-                minus.style.display = "block";
+                plus.style.display = "flex";
+                minus.style.display = "none";
             };
         });
-    });
-
-    /**
-     * Configure role
-     */
-
-    const role = localStorage.getItem("role");
-    const roleItems = document.querySelectorAll(".role");
-
-    if (role === "participant") {
-        roleItems[0].style.display = "flex";
-    } else if (role === "track-lead") {
-        roleItems[1].style.display = "flex";
-    } else if (role === "challenge-owner") {
-        roleItems[2].style.display = "flex";
-    };
-
-    /**
-     * Dashboard items
-     */
-
-    const dashElements = document.querySelectorAll(".dash-item");
-
-    dashElements.forEach((item) => {
-        const id = item.querySelector(".item-identifier").innerHTML;
-
-        if (id === "Participant" && role !== "participant") {
-            item.style.display = "none";
-        } else if (id === "Track lead" && role !== "track-lead") {
-            item.style.display = "none";
-        } else if (id === "Challenge owner" && role !== "challenge-owner") {
-            item.style.display = "none";
-        };
     });
 });
