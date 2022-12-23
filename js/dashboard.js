@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", () => {
             if (btn.classList.contains("active")) {
                 btn.classList.remove("active");
-                content.classList.remove("active");
+                content.style.display = "block";
                 plus.style.display = "none";
                 minus.style.display = "flex";
             } else {
                 btn.classList.add("active");
-                content.classList.add("active");
+                content.style.display = "none";
                 plus.style.display = "flex";
                 minus.style.display = "none";
             };
